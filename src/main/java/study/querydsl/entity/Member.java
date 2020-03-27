@@ -1,6 +1,7 @@
 package study.querydsl.entity;
 
 import lombok.*;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnJava;
 
 import javax.persistence.*;
 
