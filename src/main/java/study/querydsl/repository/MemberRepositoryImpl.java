@@ -64,7 +64,8 @@ public class MemberRepositoryImpl implements MemberRepositoryCustom {
         List<MemberTeamDto> contents = results.getResults();
         long total = results.getTotal();
 
-        return new PageImpl<>(contents, pageable, total);
+//        return new PageImpl<>(contents, pageable, total);
+        return PageableExecutionUtils.getPage(contents, pageable, results::getTotal);
     }
 
     @Override
